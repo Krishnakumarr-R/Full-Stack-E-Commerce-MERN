@@ -6,19 +6,15 @@ import ROLE from '../common/Role';
 
 const AdminPanel = () => {
     const user = useSelector(state => state?.user?.user)
-    const navigate = useNavigate()
+    
 
 
-    useEffect(()=>{
-        if(user?.role !== ROLE.ADMIN){
-            navigate("/")
-        }
-    },[user])
+    
 
   return (
     <div className='min-h-[calc(100vh-120px)] md:flex hidden'>
 
-        <aside className='bg-white min-h-full  w-full  max-w-60 customShadow'>
+        <aside className='bg-white   w-full  max-w-60  customShadow'>
                 <div className='h-32  flex justify-center items-center flex-col'>
                     <div className='text-5xl cursor-pointer relative flex justify-center'>
                         {

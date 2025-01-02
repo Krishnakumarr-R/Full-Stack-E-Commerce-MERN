@@ -16,7 +16,6 @@ const Header = () => {
   const dispath = useDispatch();
   const [menuDisplay, setmenuDisplay]=useState(false)
 
-  console.log("user header",user);
 
   const handleLogout =async()=>{
     const fetchData = await fetch(SummaryApi.logout_user.url,{
@@ -36,7 +35,7 @@ const Header = () => {
   }
 
   return (
-  <header className='h-16 shadow-md bg-white'>
+  <header className='h-16  bg-white'>
 <div className='h-full container mx-auto flex items-center px-4 justify-between'>
     <div className=''>
         <Link to={"/"} ><Logo w={90} h={50} /></Link>
@@ -65,7 +64,7 @@ const Header = () => {
           menuDisplay &&(
             <div className='absolute bg-white bottom-0 top-11 h-fit p-4 shadow-lg rounded '>
           <nav>
-            <Link to={"admin-panel"} className='whitespace-nowrap hover:bg-slate-100 p-2' onClick={()=>setmenuDisplay(prev => !prev)}>Admin Panel</Link>
+            <Link to={"/admin-panel"} className='whitespace-nowrap hover:bg-slate-100 p-2' onClick={()=>setmenuDisplay(prev => !prev)}>Admin Panel</Link>
           </nav>
           
         </div>

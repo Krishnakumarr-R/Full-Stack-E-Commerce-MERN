@@ -1,7 +1,6 @@
 import { useEffect } from 'react'
 import Header from './components/Header'
 import './App.css'
-import Footer from './components/Footer'
 import { Outlet } from 'react-router-dom'
 import { ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -25,7 +24,6 @@ function App() {
       dispath(setUserDetails(dataApi))
     }
 
-    console.log("data-user",dataResponse);
    
    }
    
@@ -47,10 +45,9 @@ function App() {
     }} >
     <ToastContainer/>
     <Header/>
-    <main className='min-h-[calc(100vh-120px)'>
+    <main className='min-h-[calc(100vh-120px)]'>
       <Outlet/>
       </main>
-    <Footer/>
     </Context.Provider>
     </>
   )
