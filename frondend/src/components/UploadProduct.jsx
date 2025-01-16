@@ -3,7 +3,7 @@ import { CgClose } from "react-icons/cg";
 import productCategory from '../helpers/productCategory';
 import { FaCloudUploadAlt } from "react-icons/fa";
 import uploadImage from '../helpers/uploadImage';
-import DisplayImage from '../components/DisplayImage';
+import DisplayImage from './DisplayImage';
 import { MdDelete } from "react-icons/md";
 import SummaryApi from '../common';
 import {toast} from 'react-toastify'
@@ -23,7 +23,7 @@ const UploadProduct = ({
   })
   const [openFullScreenImage,setOpenFullScreenImage] = useState(false)
   const [fullScreenImage,setFullScreenImage] = useState("")
-
+  
 
   const handleOnChange = (e)=>{
       const { name, value} = e.target
@@ -76,6 +76,8 @@ const UploadProduct = ({
       },
       body : JSON.stringify(data)
     })
+
+    
 
     const responseData = await response.json()
 
